@@ -100,16 +100,16 @@ var geometry, material, mesh;
     specularMap: null
   });
   mesh3 = new THREE.Mesh( geometry, material );
-    mesh3.position.z = -1000;
-    mesh3.position.x = -35;
-    mesh3.position.y = 40;
-    scene.add( mesh3);
+  mesh3.position.z = -1000;
+  mesh3.position.x = -35;
+  mesh3.position.y = 40;
+  scene.add( mesh3);
 
-  var radius = 30; //Setting the sizes for the larger sphere
+  var radius = 250; //Setting the sizes for the larger sphere
   var segments = 10;
   var rings = 10;
 
-  var radius1 = 25; //Setting the sizes for the smaller sphere
+  var radius1 = 200; //Setting the sizes for the smaller sphere
   var segments1 = 10;
   var rings1 = 10;
 
@@ -119,9 +119,10 @@ var geometry, material, mesh;
     wireframe: true
   }); //Setting the material for the sphere
 
-  var cube = new THREE.Mesh(geometry, material); //setting cube for sphere one
+  var sphere = new THREE.Mesh(geometry, material); //setting cube for sphere one
+  sphere.position.z = -1000
   camera.position.z = 150; //sets camera position
-  scene.add(cube); //adds cube to scene
+  scene.add(sphere); //adds cube to scene
 
   var geometry = new THREE.SphereGeometry(radius1, segments1, rings1); //creating sphere two
   var material = new THREE.MeshBasicMaterial({
@@ -129,18 +130,19 @@ var geometry, material, mesh;
     wireframe: true
   });
 
-  var cube1 = new THREE.Mesh(geometry, material);
+  var sphere1 = new THREE.Mesh(geometry, material);
+  sphere1.position.z = -1000
   camera.position.z = 150;
-  scene.add(cube1);
+  scene.add(sphere1);
 
 var render = function () { // Render Loop
   requestAnimationFrame( render );
 
-  cube.rotation.x += 0.01;//sets the rotation of the sphere one
-  cube.rotation.y += 0.01;
+  sphere.rotation.x += 0.01;//sets the rotation of the sphere one
+  sphere.rotation.y += 0.01;
 
-  cube1.rotation.x += 0.01; //Sphere two
-  cube1.rotation.y += 0.01;
+  sphere1.rotation.x += 0.01; //Sphere two
+  sphere1.rotation.y += 0.01;
 
 
   mesh.rotation.x += 0.02; //Continuously rotate the mesh //BL
