@@ -6,5 +6,5 @@ MAYA City - Shows my basic city so far. I need to create different Textures for 
 
 Inspiration Idea - Shows my thoughts on how the city may turn out to be?
 
-Once I have the VR button and a better City design I will intergrate them and then use add audio that the visuals will react to. For example the colour of the windows could change depending on the beat of the music.
+Once I have the VR button and a better City design I will intergrate them and then add audio that the visuals will react to. For example the colour of the windows could change depending on the beat of the music.
 I know that my project needs a lot of work and it is no where near finished! 
